@@ -1,5 +1,5 @@
 <template>
- 
+  <div>Лого</div>
 </template>
 
 <script setup>

@@ -1,6 +1,41 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
+  --color-primary: #ffffff;
+  --color-bg: #343d4b;
+  --color-primary-inverted: #000;
+  --color-card-bg: #272e37;
+  --color-main-bg: #222831;
+  --gradient: linear-gradient(90.8deg, rgba(144, 217, 224, 0.9) 0.2%, rgba(84, 96, 230, 0.9) 100%);
+  --gradient-inverted: background: linear-gradient(256.33deg, rgba(144, 217, 224, 0.9) 9.04%, rgba(84, 96, 230, 0.9) 92.2%);
+}
+
+body {
+  color: var(--color-primary);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
 }
