@@ -42,6 +42,7 @@ const shortDay = date.toLocaleString('ru-RU', { weekday: 'short' });
   padding: 12px 24px;
   transition: 0.25s;
   cursor: pointer;
+  box-shadow: 1px 2px 4px 0px var(--color-main-bg);
 }
 
 .weather-card.__active {

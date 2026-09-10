@@ -5,7 +5,7 @@
       Изменить город
     </Button>
     <div v-if="!isEdited" class="city-select_city">
-      <input id="city" v-model="city" type="text" name="city" placeholder="Введите город" class="city-select_input" @keyup.enter="select">
+      <input id="city" v-model="city" v-focus type="text" name="city" placeholder="Введите город" class="city-select_input" @keyup.enter="select">
       <Button @click="select">
         Сохранить
       </Button>
@@ -18,21 +18,17 @@ import { ref } from 'vue';
 import Button from './Button.vue';
 import IconLocation from './icons/IconLocation.vue';
 
-const emit = defineEmits({
-  selectCity(payload) {
-    return payload;
-  }
-});
+const emit = defineEmits(['select-city']);
 
 const city = ref('Moscow');
 const isEdited = ref(true);
 
 const select = () => {
   isEdited.value = true;
-  emit('selectCity', city.value);
+  emit('select-city', city.value);
 }
 
-emit('selectCity', city.value);
+emit('select-city', city.value);
 </script>
 
 <style scoped>
