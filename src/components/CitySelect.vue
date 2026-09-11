@@ -20,7 +20,7 @@ import IconLocation from './icons/IconLocation.vue';
 
 const emit = defineEmits(['select-city']);
 
-const city = ref('Moscow');
+const city = ref('Москва');
 const isEdited = ref(true);
 
 const select = () => {

@@ -1,15 +1,15 @@
 import { ref, computed } from 'vue';
 
+const apiKey = import.meta.env.VITE_API_KEY;
+
+const data = ref();
+const load = ref(false);
+const emptyResult = ref(false);
+const dayWeather = ref();
+const currentDate = ref();
+const days = computed(() => data.value?.forecast?.forecastday);
+
 export const useWeatherData = () => {
-
-  const apiKey = import.meta.env.VITE_API_KEY;
-
-  const data = ref();
-  const load = ref(false);
-  const emptyResult = ref(false);
-  const dayWeather = ref();
-  const currentDate = ref();
-  const days = computed(() => data.value?.forecast?.forecastday);
 
   const setDayWeather = (day, date) => {
     currentDate.value = date;
