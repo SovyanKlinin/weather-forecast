@@ -40,16 +40,18 @@ export const useWeatherData = () => {
       q: city,
       key: apiKey
     })
-    const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?${params.toString()}`);
+    const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?${params.toString()}`);
     data.value = await res.json();
-
-    const dayData = data.value.forecast.forecastday[0];
-    setDayWeather(dayData.day, dayData.date);
 
     if (data.value.error) {
       load.value = false;
       emptyResult.value = true;
+      return;
     }
+
+    const dayData = data.value.forecast.forecastday[0];
+    setDayWeather(dayData.day, dayData.date);
+
     setTimeout(() => {
       load.value = false;
     }, 1000);
