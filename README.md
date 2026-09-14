@@ -2,7 +2,7 @@
 
 Приложение прогноза погоды на Vue 3 + Vite. Позволяет выбрать город и посмотреть текущую погоду и прогноз на 3 дня (влажность, осадки, видимость) через [WeatherAPI](https://www.weatherapi.com/).
 
-🔗 Деплой: https://weather-forecast-b59a-1fan5a9qj-sovyan-klinin.vercel.app/
+🔗 Деплой: https://weather-forecast-nu-five.vercel.app/
 
 ## Стек
 
