@@ -1,5 +1,42 @@
-# Vue 3 + Vite
+# Weather Forecast
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Приложение прогноза погоды на Vue 3 + Vite. Позволяет выбрать город и посмотреть текущую погоду и прогноз на 3 дня (влажность, осадки, видимость) через [WeatherAPI](https://www.weatherapi.com/).
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+🔗 Деплой: https://weather-forecast-b59a-1fan5a9qj-sovyan-klinin.vercel.app/
+
+## Стек
+
+- Vue 3 (`<script setup>`)
+- Vite
+- ESLint
+
+## Запуск локально
+
+```bash
+npm install
+```
+
+Создай файл `.env` в корне проекта и укажи свой API-ключ от [WeatherAPI](https://www.weatherapi.com/):
+
+```
+VITE_API_KEY=your_api_key
+```
+
+Запуск dev-сервера:
+
+```bash
+npm run dev
+```
+
+Сборка:
+
+```bash
+npm run build
+```
+
+Просмотр собранной версии:
+
+```bash
+npm run preview
+```
+
