@@ -8,6 +8,7 @@ const emptyResult = ref(false);
 const dayWeather = ref();
 const currentDate = ref();
 const days = computed(() => data.value?.forecast?.forecastday);
+const hasData = computed(() => !!data.value && !data.value.error);
 
 export const useWeatherData = () => {
 
@@ -64,6 +65,7 @@ export const useWeatherData = () => {
     dayWeather,
     currentDate,
     days,
+    hasData,
     setDayWeather,
     getCity
   }

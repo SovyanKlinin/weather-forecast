@@ -6,7 +6,7 @@
       </span>
     </div>
     <Loader v-if="load" />
-    <template v-if="!load && !emptyResult">
+    <template v-if="!load && hasData">
       <ul>
         <li v-for="(item, index) in dayWeather" :key="index">
           <Stat :name="item.name" :value="item.value" />
@@ -30,7 +30,7 @@ import Loader from './Loader.vue';
 import WeatherCard from './WeatherCard.vue';
 import { useWeatherData } from '../composables/useWeatherData';
 
-const { load, emptyResult, dayWeather, days, currentDate , setDayWeather, getCity} = useWeatherData();
+const { load, emptyResult, dayWeather, days, currentDate, hasData, setDayWeather, getCity } = useWeatherData();
 </script>
 
 <style scoped>
@@ -43,7 +43,10 @@ const { load, emptyResult, dayWeather, days, currentDate , setDayWeather, getCit
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.right-panel_content :deep(.city-select) {
+  margin-top: auto;
 }
 
 .right-panel_empty-search {
@@ -68,7 +71,7 @@ ul {
   flex-direction: column;
   gap: 16px;
   list-style: none;
-  margin: 0;
+  margin: 0 0 70px;
   padding: 0;
 }
 

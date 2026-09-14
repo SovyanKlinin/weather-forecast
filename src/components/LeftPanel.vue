@@ -1,6 +1,6 @@
 <template>
   <section class="left-panel">
-    <div class="left-panel_content" :class="{ __load: load}">
+    <div v-if="hasData" class="left-panel_content" :class="{ __load: load}">
       <header>
         <span class="left-panel_title">{{ firstSymbolToUpperCase(dayOfWeek) }}</span>
         <span class="left-panel_date">{{ dateFormatter(currentDate) }}</span>
@@ -25,7 +25,7 @@ import { firstSymbolToUpperCase } from '../utils/firstSymbolToUpperCase';
 import { dateFormatter } from '../utils/dateFormatter';
 import IconLocation from './icons/IconLocation.vue';
 
-const { data, currentDate, load } = useWeatherData();
+const { data, currentDate, load, hasData } = useWeatherData();
 
 const currentDay = computed(() => data.value?.forecast?.forecastday?.find(el => el.date === currentDate.value));
 const city = computed(() => data.value?.location?.name);
